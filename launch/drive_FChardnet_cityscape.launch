@@ -1,0 +1,9 @@
+<launch>
+  <arg name="det_rate" default="5"/>
+  <arg name="image_src" default="/image_raw"/>
+  
+  <node pkg="drive_area_detection" name="drive_segmentation" type="drive_segmentation.py" output="screen">
+    <param name="image_src" type="str" value="$(arg image_src)"/>
+    <param name="det_rate" type="double" value="$(arg det_rate)"/>
+  </node>
+</launch>

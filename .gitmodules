@@ -1,0 +1,6 @@
+[submodule "FCHarDNet"]
+	path = FCHarDNet
+	url = ./src/FCHarDNet/
+[submodule "src/FCHarDNet"]
+	path = src/FCHarDNet
+	url = https://github.com/NCTUyoung/FCHarDNet.git

@@ -1,0 +1,16 @@
+<launch>
+  <arg name="det_rate" default="10"/>
+  <arg name="image_src" default="/image_raw"/>
+
+
+  <node pkg="drive_area_detection" name="drive_area_detection" type="drive_area.py" output="screen">
+  </node>
+
+  <node pkg="lane_detect" name="lane_detect" type="light_condiction_style_transfer.py" output="screen">
+  </node>
+
+  <node pkg="lane_detect" name="lane_detect_curve" type="lane_curve_fit.py" output="screen">
+  </node>
+
+
+</launch>

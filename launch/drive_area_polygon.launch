@@ -1,0 +1,17 @@
+<launch>
+  <!-- <arg name="det_rate" default="5"/> -->
+  <arg name="image_src" default="/image_raw"/>
+  <arg name="eps" default="1"/>
+  <arg name="min_samples" default="5"/>
+  <arg name="threshold_points" default="700"/>
+  <arg name="vis_topic" default="true"/>
+  
+  <node pkg="drive_area_detection" name="drive_area_polygon" type="drive_area_polygon.py" output="screen">
+    <param name="image_src" type="str" value="$(arg image_src)"/>
+    <param name="eps" type="double" value="$(arg eps)"/>
+    <param name="min_samples" type="int" value="$(arg min_samples)"/>
+    <param name="threshold_points" type="int" value="$(arg threshold_points)"/>
+    <param name="vis_topic" type="bool" value="$(arg vis_topic)"/>
+    
+  </node>
+</launch>
